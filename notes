@@ -1,0 +1,23 @@
+Movie Frontend
+
+
+lazy loading
+it is a process of loading components , modules
+it improves application loading items
+
+ng g m movies --route movies --module app.module
+
+add router-outlet inside app.component.html
+
+create component that shoud lazy loaded in movie module
+
+ng g c movies/all-movies
+
+
+
+13)import httpclient module
+14)Connection between api and
+
+dependecy injection httpClient class
+ 
+ httpclient class

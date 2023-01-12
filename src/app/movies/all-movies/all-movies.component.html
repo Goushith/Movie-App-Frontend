@@ -1,0 +1,53 @@
+  <!-- <pre>{{allmovies | json}}</pre> -->
+
+ <app-header></app-header>
+
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://live.staticflickr.com/2222/2452159541_23ca8f2df0_b.jpg  " class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.thebatman.com/assets/images/ipadbannerportrait.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://irs.www.warnerbros.com/hero-banner-jpeg/movies/media/browser/inception_banner.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+<div class="container py-5">
+  <div class="row pb-5 mb-4">
+    <div *ngFor="let movies of allmovies" class="col-lg-3 col-md-6 mb-4 mb-lg-0"> &nbsp;
+      <div  class="card rounded shadow-sm border-0 ">
+        <div class="card-body cardcolor p-4"><img [src]="movies.cover" alt="" class="img-fluid d-block mx-auto mb-3">
+          <h5 class="text-white">{{movies.name}}</h5>
+          <p class="small text-white  font-italic"> A {{movies.directors}} movie</p>
+          <p class="small text-white  font-italic">{{movies.rating}}</p>
+          
+          <ul class="list-inline small">
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+          </ul>
+          <!-- <a (click)="gotoreview('movies',movies.id)" class="btn btn-primary">Know More</a> -->
+          <button routerLink="/description/{{movies.id}}"   class="btn btn-warning">Know More</button> &nbsp;
+          <button type="button" routerLink="/description/{{movies.id}}"   class="btn btn-outline-warning" data-toggle="tooltip" data-placement="right" title="Add to wishlist"><i class="fa-solid fa-bookmark"></i></button>
+        </div>
+      </div>
+    </div> <br> <br>
+
+  </div>
+</div>

@@ -1,0 +1,171 @@
+
+
+
+.backgroungimage{
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/7cee2527-d2cc-4cc9-99f6-d1375e72d46e/eb83fa55-ab10-476a-b103-499eb7c6e022/IN-en-20230103-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    filter: blur(6px);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+
+
+.userbox i {
+    position: absolute;
+}
+  
+.userbox {
+    width: 100%;
+    margin-bottom: 10px;
+}
+  
+.icon {
+    padding: 10px;
+    min-width: 40px;
+    right: 7px;
+    color: black;
+    top: 5px;
+}
+  
+.input {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box{
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%,-50%);
+    background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@100;200&family=Poppins:ital,wght@0,200;1,200&family=Raleway:wght@100;300&family=Rowdies:wght@400;700&display=swap');
+
+.box h2{
+    margin: 0 0 30px;
+    padding: 0;
+    color: rgb(255, 0, 0);
+    font-family: 'Anton', sans-serif;
+    font-weight: 700;
+    /* text-align:; */
+}
+
+
+
+.box .userbox{
+position: relative;
+}
+
+.box .userbox input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 30px;
+    border-radius: 50px;
+    border-bottom: 1px solid  #fff;
+    outline: none;
+    
+    background: rgba(216, 216, 216, 0.6);
+}
+
+.box .userbox input::placeholder{
+    color:black;
+}
+
+
+/* .box .userbox label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+} */
+
+/* .box .userbox input:focus ~ label,
+.box .userbox input:valid ~ label{
+    top:-20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+} */
+
+
+    a {
+        margin-left: 10px;
+        text-decoration:none;
+        color: rgb(255, 221, 221);
+    }
+/* .link{
+    margin-left: 140px ;
+} */
+
+.loginlink{
+  margin-left: 40px;
+  color: white;
+}
+
+
+a:hover{
+    text-decoration: underline;
+    color: #000271;
+}
+
+
+
+.box form button{
+    margin-left: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #004080;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    border: none;
+    border-radius: 5px;
+}
+
+.id{
+  margin-left: 190px;
+}
