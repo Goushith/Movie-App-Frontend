@@ -9,6 +9,9 @@ import { ReviewComponent } from './review/review.component';
 import{HttpClientModule} from "@angular/common/http";
 import { HeaderComponent } from './header/header.component';
 import { WatchlistComponent } from './watchlist/watchlist.component'
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import {NgConfirmModule} from 'ng-confirm-box';
+
 // import { HeaderComponent } from '../header/header.component';
 // import { AppModule } from "../app.module";
 
@@ -26,6 +29,10 @@ import { WatchlistComponent } from './watchlist/watchlist.component'
         CommonModule,
         MoviesRoutingModule,
         HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        NgConfirmModule
         // AppModule
     ]
 })

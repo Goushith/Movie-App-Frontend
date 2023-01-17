@@ -28,7 +28,7 @@
 
 <div class="container py-5">
   <div class="row pb-5 mb-4">
-    <div *ngFor="let movies of allmovies" class="col-lg-3 col-md-6 mb-4 mb-lg-0"> &nbsp;
+    <div  *ngFor="let movies of allmovies" class=" col-lg-3 col-md-6 mb-4 mb-lg-0"> &nbsp;
       <div  class="card rounded shadow-sm border-0 ">
         <div class="card-body cardcolor p-4"><img [src]="movies.cover" alt="" class="img-fluid d-block mx-auto mb-3">
           <h5 class="text-white">{{movies.name}}</h5>
@@ -44,7 +44,7 @@
           </ul>
           <!-- <a (click)="gotoreview('movies',movies.id)" class="btn btn-primary">Know More</a> -->
           <button routerLink="/description/{{movies.id}}"   class="btn btn-warning">Know More</button> &nbsp;
-          <button type="button" routerLink="/description/{{movies.id}}"   class="btn btn-outline-warning" data-toggle="tooltip" data-placement="right" title="Add to wishlist"><i class="fa-solid fa-bookmark"></i></button>
+          <button type="button"   (click)="addtowatchlist(movies.id,movies.name,movies.cover,movies.rating,movies.actors,movies.directors,movies.description)"  class="btn btn-outline-warning" data-toggle="tooltip" data-placement="right" title="Add to wishlist"><i class="fa-solid fa-bookmark"></i></button>
         </div>
       </div>
     </div> <br> <br>

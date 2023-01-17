@@ -7,7 +7,9 @@
                 <li class="nav-item"><a routerLink="/all-movies" class="nav-link active text-dark" routerlink="/all-movies" >Home</a></li>
                 <!-- <li class="nav-item"><a class="nav-link active text-dark" href="#!">About</a></li>-->
                 <li class="nav-item"><a class="nav-link active text-dark" routerLink="/watchlist">Watch List</a></li> 
-                <li class="nav-item"><a  class="nav-link active text-dark" routerLink="/movies" >logout</a></li>
+                
+                <li class="nav-item"><a  class="nav-link active text-dark" >Welcome <span style="font-weight: 700; font-size: large;">{{user}}</span></a></li>
+                <li class="nav-item"><button  class="btn btn-dark" (click)="logOut()" >logout</button></li>
             </ul>
         </div>
     </div>

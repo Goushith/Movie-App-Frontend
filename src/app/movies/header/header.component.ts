@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,28 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+user=""
+  constructor(private router:Router) {
 
-  constructor(private route:ActivatedRoute) { }
+    if(localStorage.getItem('currentUser')){
+      this.user=JSON.parse(localStorage.getItem('currentUser')||'')
+      // console.log(this.user);
+    }
+
+
+   }
 
   ngOnInit(): void {
   }
+
+
+
+  logOut(){
+    // alert('gsg')
+    localStorage.removeItem('currentUser');
+    localStorage.removeItem('currentAcno');
+    localStorage.removeItem('token')
+    this.router.navigateByUrl('')
+    }
 
 }

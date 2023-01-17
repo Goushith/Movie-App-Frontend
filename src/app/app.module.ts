@@ -9,7 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { MoviesModule } from './movies/movies.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import {NgConfirmModule} from 'ng-confirm-box';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,11 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MoviesModule
+    MoviesModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgConfirmModule
   ],
   providers: [],
   bootstrap: [AppComponent]
