@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgConfirmService } from 'ng-confirm-box';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -12,7 +13,7 @@ watchlist:any
 emsg:any
 email:any
 
-  constructor(private api : ApiService,private router:Router) {
+  constructor(private api : ApiService,private router:Router,private confirmService:NgConfirmService) {
     this.email=localStorage.getItem('currentEmail')
     this.getwatchlist(this.email)
 
@@ -27,6 +28,9 @@ email:any
     .subscribe(
       (result:any)=>{
       this.watchlist=result.watchlist
+      if(this.watchlist.length==0){
+        this.emsg='Empty Wishlist'
+      }
 
     },
     (result: any) => {
@@ -40,17 +44,33 @@ email:any
   }
 
 deletewatchlist(movies:any){
+this.confirmService.showConfirm("Are you sure you want to Delete ?" ,
+()=>{
   this.api.deletefromwatchlist(movies.email)
   .subscribe(
     (result:any)=>{
-      alert(result.message)
+      // alert(result.message)
+      this.router.navigateByUrl('watchlist')
+      this.watchlist=result.watchlist
+      window.location.reload()
+ 
+      // this.watchlist=result.watchlist
     },
 (result:any)=>{
-  alert(result.error.message)
+  // alert(result.error.message)
 }
   )
-}
+
+},
+
+()=>{
+
+
+})
 
 
 
 }
+}
+
+

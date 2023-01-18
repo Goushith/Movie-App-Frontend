@@ -18,7 +18,7 @@ username="";
 //registration model
 registrationForm=this.fb.group({
   email:['',[Validators.required,Validators.email]],
-  username:['',[Validators.required,Validators.pattern('[a-zA-Z]*')]],
+  username:['',[Validators.required,Validators.pattern('[a-z A-Z]*')]],
   password:['',[Validators.required,Validators.pattern('[a-zA-Z0-9]*')]]
 })
 

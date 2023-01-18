@@ -1,13 +1,13 @@
 <app-header></app-header>
 
-<div  class="container border border-primary m-5 p-4 mt-5" *ngIf="emsg" >
+<div  class=" m-5 p-4 mt-5"   *ngIf="emsg" >
     <div class="row">
-        <div class="col">
-            <img src="https://cdni.iconscout.com/illustration/premium/thumb/woman-doing-online-shopping-3678723-3098921.png"
-                width="25%" alt=""> 
-                
-            <h3 class="mt-5">Your Wishlist is Empty</h3>
-            <button routerLink="/" class="btn btn-primary mt-2"><i class="fa fa-cart-plus"></i></button>
+        <div class="col text-center">
+            <!-- <img src="../../../assets/images/—Pngtree—man watching tv illustration vector_5298938.png"
+                 alt=""> 
+                 -->
+            <h3 class="mt-5 text-center">No Movies in watchlist</h3>
+            <button routerLink="/all-movies"   class="btn btn-outline-warning text-center">Go back to All Movies</button> &nbsp;
         </div>
     </div>
 
