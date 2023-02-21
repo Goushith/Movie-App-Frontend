@@ -11,15 +11,15 @@ import { ApiService } from '../movies/api.service';
 })
 export class LoginComponent implements OnInit {
 
-  email="";
-  password="";
+      email="";
+      password="";
 
   constructor(private fb:FormBuilder,private api:ApiService,private router:Router,private confirmService:NgConfirmService) { }
 
-  loginForm=this.fb.group({
-    email:["",[Validators.required,Validators.email]],
-    password:["",[Validators.required,Validators.pattern('[a-zA-Z0-9]*')]],
-  })
+    loginForm=this.fb.group({
+      email:["",[Validators.required,Validators.email]],
+      password:["",[Validators.required,Validators.pattern('[a-zA-Z0-9]*')]],
+    })
 
 
   ngOnInit(): void {

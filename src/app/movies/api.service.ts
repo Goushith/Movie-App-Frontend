@@ -86,12 +86,6 @@ login(email:any,password:any){
   }
 
 
-
-
-
-
-
-
 // addtowatchlist(movies:any){
 
 //   const body={

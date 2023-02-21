@@ -49,33 +49,14 @@ export class DescriptionComponent implements OnInit {
     },
     (result:any)=>{
       alert(result.error.message);
-    //   )
-    // }
 
     })
 
   }
 
-
 pushreview(){
   localStorage.setItem('reviews',JSON.stringify(this.movies.reviews))
 }
-
-
-
-
-
-// review details
-
-
-
-
-
-
-
-
-
-
 
 }
 
